@@ -1,0 +1,19 @@
+@import "../../styles.scss";
+
+.game_field {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  background-image: url("../../assets/img/game_field.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include dFlex();
+  > .card_stick {
+    position: relative;
+    > img {
+      position: absolute;
+      width: 120px;
+    }
+  }
+}

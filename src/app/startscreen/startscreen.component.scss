@@ -1,0 +1,41 @@
+@import '../../styles.scss';
+
+.start-screen {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    #d8d3df,
+    #868791,
+    #33313b,
+    #020220,
+    black
+  );
+  @include dFlex($g: 24px);
+  flex-direction: column;
+  > img:nth-child(1) {
+    width: 100%;
+  }
+  > .wrapper_text {
+    width: 30vw;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    font-size: 32px;
+    > img {
+      width: 100%;
+      height: auto;
+      &:hover {
+        filter: brightness(1.5);
+      }
+    }
+    > .start_text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

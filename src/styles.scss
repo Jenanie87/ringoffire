@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@mixin dFlex($jc: center, $ai: center, $g: 0px) {
+    display:flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+}
