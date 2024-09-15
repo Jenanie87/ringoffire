@@ -1,7 +1,8 @@
 <div class="game_field">
   <div class="card_stick">
-    @for (item of [0, 1, 2, 3, 4]; track item; let index = $index) {
-    <img [ngStyle]="{'left.px' : index*5}" src="../../assets/img/cards/card_cover.png" alt="" />
+    @for (item of [0, 1, 2, 3]; track item; let index = $index) {
+        <img [ngStyle]="{'left.px' : index*5}" src="../../assets/img/cards/card_cover.png" alt="" />
     }
+    <img class="top_card" src="../../assets/img/cards/card_cover.png" alt="" />
   </div>
 </div>

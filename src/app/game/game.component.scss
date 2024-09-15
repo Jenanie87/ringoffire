@@ -11,6 +11,14 @@
   @include dFlex();
   > .card_stick {
     position: relative;
+    > .top_card {
+        left: 25px;
+        transition: all 125ms ease-in;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1) translateY(-10px);
+        }
+    }
     > img {
       position: absolute;
       width: 120px;
