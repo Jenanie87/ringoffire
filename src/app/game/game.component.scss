@@ -25,3 +25,30 @@
     }
   }
 }
+
+.pick_card,
+.played_card {
+    animation: pick_card_animation 1s ease-in-out;
+/*     transform: scale(1) translateX(-140px) translateY(-180px) rotate(-10deg); */
+}
+
+@keyframes pick_card_animation {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.7);
+    }
+    60% {
+        transform: scale(1.7);
+    }
+    100% {
+        // transform: scale(1) translateX(-140px) translateY(-180px) rotate(-10deg);
+    }
+}
+
+.player_position {
+    position: absolute;
+    right: 0;
+}
+
