@@ -13,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 export class PlayerComponent {
   @Input() singlePlayer = {
     name: "Bunny",
-    img: "../assets/img/profiles/profile_1.svg"
+    img: "assets/img/profiles/profile_1.svg"
   };
 
   @Input() playerActive: boolean = false; 

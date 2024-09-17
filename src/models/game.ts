@@ -8,7 +8,7 @@ export class Game {
     public stack: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
-    public profileImg: string[] = ["../assets/img/profiles/profile_1.svg", "../assets/img/profiles/profile_2.svg", "../assets/img/profiles/profile_3.svg", "../assets/img/profiles/profile_4.svg"];
+    public profileImg: string[] = ["assets/img/profiles/profile_1.svg", "assets/img/profiles/profile_2.svg", "assets/img/profiles/profile_3.svg", "assets/img/profiles/profile_4.svg"];
 
     constructor() {
         this.loadStack();
