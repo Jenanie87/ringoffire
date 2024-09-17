@@ -77,7 +77,9 @@ export class GameComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
     dialogRef.afterClosed().subscribe(inputName => {
-      this.addPlayer(inputName, this.getRandomItem(this.game.profileImg));
+      if(inputName && inputName.length > 0) {
+        this.addPlayer(inputName, this.getRandomItem(this.game.profileImg));
+      }
     });
   }
 
