@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { Game } from '../../models/game';
 import { PlayerComponent } from "../player/player.component";
+import { GamesInfoComponent } from '../games-info/games-info.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 // import { FormsModule } from '@angular/forms';
@@ -22,7 +23,7 @@ import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, PlayerComponent, MatButtonModule, MatIconModule, DialogAddPlayerComponent],
+  imports: [CommonModule, GamesInfoComponent, PlayerComponent, MatButtonModule, MatIconModule, DialogAddPlayerComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })
@@ -49,7 +50,8 @@ export class GameComponent implements OnInit {
         this.rotations.push(this.currentCardRotation);
       }
       this.pickCardAnimation = true;
-
+      this.game.currentPlayer++; 
+      this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
       setTimeout(() => {
         this.pickCardAnimation = false;
       }, 1500)

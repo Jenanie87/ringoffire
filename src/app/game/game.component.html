@@ -1,5 +1,5 @@
 @for (player of game.players; track player; let index = $index) {
-  <app-player [singlePlayer]="player" class="player_position" [ngStyle]="{'top.px' : 140 + (index * 200)}"></app-player>
+  <app-player [playerActive]="index == game.currentPlayer" [singlePlayer]="player" class="player_position" [ngStyle]="{'top.px' : 140 + (index * 100)}"></app-player>
 } 
 
 
@@ -10,13 +10,17 @@
     }
     <img class="top_card" (click)="pickCard()" src="../../assets/img/cards/card_cover1.png" alt="" />
     @if (pickCardAnimation) {
-        <img class="pick_card" [ngStyle]="{'transform': 'scale(1) translateX(-140px) translateY(-180px) rotate(' + currentCardRotation + 'deg)'}" (click)="pickCard()" src="../../assets/img/cards/{{ currentCard }}" alt="" />
+        <img class="pick_card" [ngStyle]="{'transform': 'scale(1) translateX(-140px) translateY(-180px) rotate(' + currentCardRotation + 'deg)'}" (click)="pickCard()" src="../../assets/img/cards/{{ currentCard }}.png" alt="" />
     }
     @for (card of game.playedCards; track card; let index = $index) {
-      <img class="played_card" [ngStyle]="{'transform': 'scale(1) translateX(-140px) translateY(-180px) rotate(' + rotations[index] + 'deg)'}" src="../../assets/img/cards/{{ card }}" alt="">
+      <img class="played_card" [ngStyle]="{'transform': 'scale(1) translateX(-140px) translateY(-180px) rotate(' + rotations[index] + 'deg)'}" src="../../assets/img/cards/{{ card }}.png" alt="">
     }
   </div>
 </div>
+
+<app-games-info [card]="currentCard" class="game_info">
+
+</app-games-info>
 
 <button mat-fab class="btn_add" (click)="openDialog()">
   <mat-icon>add</mat-icon>
