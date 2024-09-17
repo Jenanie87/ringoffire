@@ -1,24 +1,14 @@
+export interface Player {
+    name: string;
+    img: string;
+}
+
 export class Game {
-    public players = [{
-        name: "Bunny",
-        img: "../assets/img/profiles/profile_1.svg"
-    },
-    {
-        name: "Amy",
-        img: "../assets/img/profiles/profile_3.svg"
-    },
-    {
-        name: "Rey",
-        img: "../assets/img/profiles/profile_4.svg"
-    },
-    {
-        name: "Mamoru",
-        img: "../assets/img/profiles/profile_2.svg"
-    },
-    ]
+    public players: Player[] = [];
     public stack: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
+    public profileImg: string[] = ["../assets/img/profiles/profile_1.svg", "../assets/img/profiles/profile_2.svg", "../assets/img/profiles/profile_3.svg", "../assets/img/profiles/profile_4.svg"];
 
     constructor() {
         this.loadStack();

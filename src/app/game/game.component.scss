@@ -1,6 +1,7 @@
 @import "../../styles.scss";
 
 .game_field {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   width: 100vw;
   height: 100vh;
   max-width: 100%;
@@ -50,5 +51,16 @@
 .player_position {
     position: absolute;
     right: 0;
+}
+
+.btn_add {
+    position: absolute;
+    bottom:56px;
+    right: 126px;
+    box-shadow: 5px 9px 15px 5px rgba(0, 0, 0, 0.8);
+    background-color: red;
+    &:hover {
+        box-shadow: 5px 9px 15px 5px #000000;
+    }
 }
 

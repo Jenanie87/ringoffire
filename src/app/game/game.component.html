@@ -1,6 +1,6 @@
 @for (player of game.players; track player; let index = $index) {
   <app-player [singlePlayer]="player" class="player_position" [ngStyle]="{'top.px' : 140 + (index * 200)}"></app-player>
-}
+} 
 
 
 <div class="game_field">
@@ -17,3 +17,7 @@
     }
   </div>
 </div>
+
+<button mat-fab class="btn_add" (click)="openDialog()">
+  <mat-icon>add</mat-icon>
+</button>
